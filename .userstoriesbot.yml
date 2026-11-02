@@ -1,0 +1,11 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "cd core && npm ci"
+  start: "cd core && npm start -- --port {port} --address 0.0.0.0 --no-open"
+  url: http://localhost:{port}
+  readyPath: /dist/ionic/ionic.esm.js
+  runtime: node22
+demo:
+  maxVideos: 1
+  beforePass: true
